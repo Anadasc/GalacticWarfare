@@ -10,7 +10,7 @@ public class Tirolazer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.Rotate(0,0,90);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Tirolazer : MonoBehaviour
 
     private void MovimentoLazer()
     {
-        transform.Translate(Vector3.up * velocidadeLazer * Time.deltaTime);
+        transform.Translate(Vector3.right * velocidadeLazer * Time.deltaTime);
     }
     void OnTriggerEnter2D(Collider2D other)
     {

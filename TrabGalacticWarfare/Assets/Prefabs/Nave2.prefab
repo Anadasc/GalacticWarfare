@@ -141,7 +141,7 @@ MonoBehaviour:
   disparoInim: {fileID: 6272950099663274098}
   velocidadeinimigo: 6
   vidaMInim: 2
-  tempomaximoentre: 0.5
+  tempomaximoentre: 1
   tempolaser: 0
   vidaAInim: 0
   pontosdados: 15

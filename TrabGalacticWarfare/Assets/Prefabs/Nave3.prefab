@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserInim: {fileID: 3511921020279068156, guid: 78f922580435fc445afca432509893be, type: 3}
   disparoInim: {fileID: 9096525464090924390}
-  velocidadeinimigo: 0
+  velocidadeinimigo: 10
   vidaMInim: 1
   tempomaximoentre: 0.5
   tempolaser: 0

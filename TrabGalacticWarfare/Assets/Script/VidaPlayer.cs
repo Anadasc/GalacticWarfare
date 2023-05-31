@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class VidaPlayer : MonoBehaviour
     public Slider barradevida;
     public int vidaAtualPlayer;
     public bool temEscudo;
+    public int vidas;
+    public Text vidasTexto;
     
     // Start is called before the first frame update
     void Start()
@@ -16,12 +19,15 @@ public class VidaPlayer : MonoBehaviour
         vidaAtualPlayer = vidaMaximaPlayer;
         barradevida.maxValue = vidaMaximaPlayer;
         barradevida.value = vidaAtualPlayer;
+        vidas = 6;
+        vidasTexto.text = "VidasRestantes: "+ vidas;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
     public void MachucarPlayer(int danoaReceber)
     {
@@ -31,8 +37,25 @@ public class VidaPlayer : MonoBehaviour
             barradevida.value = vidaAtualPlayer;
             if(vidaAtualPlayer <= 0)
             {
-                Debug.Log("Game Over");
+                vidas--;
+                if(vidas <= 0)
+                {
+                    SceneManager.LoadScene("SampleScene");
+                    Debug.Log("Game Over");
+                }
+                else 
+                {
+                    vidaAtualPlayer = vidaMaximaPlayer;
+                    barradevida.value = vidaAtualPlayer;
+                    Updatevidastexto();
+                    Debug.Log("Perdeu um vida. Vidas Restantes: " + vidas);
+                }
+
             }
         }
+    }
+    void Updatevidastexto()
+    {
+        vidasTexto.text = "VidasRestantes: " + vidas;
     }
 }

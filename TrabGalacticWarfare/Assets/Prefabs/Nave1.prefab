@@ -171,8 +171,8 @@ MonoBehaviour:
   laserInim: {fileID: 3511921020279068156, guid: 78f922580435fc445afca432509893be, type: 3}
   disparoInim: {fileID: 8254221495774535866}
   velocidadeinimigo: 5
-  vidaMInim: 4
-  tempomaximoentre: 1
+  vidaMInim: 3
+  tempomaximoentre: 3
   tempolaser: 0
   vidaAInim: 0
   pontosdados: 10

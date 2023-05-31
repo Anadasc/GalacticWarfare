@@ -19,7 +19,7 @@ public class LaserInim : MonoBehaviour
     }
     private void MovimentarLaser()
     {
-        transform.Translate(Vector3.up * velocidadeLaser * Time.deltaTime);
+        transform.Translate(Vector3.left * velocidadeLaser * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
