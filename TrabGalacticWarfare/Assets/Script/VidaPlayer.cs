@@ -12,7 +12,12 @@ public class VidaPlayer : MonoBehaviour
     public bool temEscudo;
     public int vidas;
     public Text vidasTexto;
-    
+
+    public GameObject EscudoPlayer;
+
+    public int vidaAtualEscudo;
+
+    public int vidaMaximaEscudo;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +26,9 @@ public class VidaPlayer : MonoBehaviour
         barradevida.value = vidaAtualPlayer;
         vidas = 6;
         vidasTexto.text = "VidasRestantes: "+ vidas;
+        
+        EscudoPlayer.SetActive(false);
+        temEscudo = false;
 
     }
 
@@ -54,8 +62,15 @@ public class VidaPlayer : MonoBehaviour
             }
         }
     }
-    void Updatevidastexto()
+    public void Updatevidastexto()
     {
         vidasTexto.text = "VidasRestantes: " + vidas;
+    }
+    
+    public void ativarEscudo()
+    {
+        vidaAtualEscudo = vidaMaximaPlayer;
+        temEscudo = true;
+        EscudoPlayer.SetActive(true);
     }
 }

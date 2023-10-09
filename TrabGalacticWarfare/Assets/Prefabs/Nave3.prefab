@@ -139,13 +139,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserInim: {fileID: 3511921020279068156, guid: 78f922580435fc445afca432509893be, type: 3}
   disparoInim: {fileID: 9096525464090924390}
+  chanceDeInstanciarPowerup: 50
   velocidadeinimigo: 10
   vidaMInim: 1
   tempomaximoentre: 0.5
   tempolaser: 0
   vidaAInim: 0
   pontosdados: 10
-  inimAtirador: 1
+  inimAngulo1: 0
+  inimAngulo2: 0
+  inimAtirador: 0
+  danoaDar: 3
+  escudoMax: 0
+  escudoAtual: 0
+  temEscudo: 0
+  escudo: {fileID: 0}
+  powerupPrefabs:
+  - {fileID: 7878601707447637486, guid: f6ef9020e682edd4198aa8cadbcfab82, type: 3}
+  - {fileID: 2691670136115324382, guid: 3441996340e2bdf43b0724173c65210f, type: 3}
+  - {fileID: 4630111821198022430, guid: 6f881434b2e346d48abd483881b288de, type: 3}
+  - {fileID: 1456502692844914599, guid: 7aa77b299c0d02b4fa5e2a3ed2b0b2e1, type: 3}
 --- !u!1 &9096525464090924391
 GameObject:
   m_ObjectHideFlags: 0

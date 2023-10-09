@@ -8,22 +8,33 @@ public class SpawnInim : MonoBehaviour
     public Transform[] pontosDeSpawn;
     public float tempomentrespawn;
     public float tempoAtualSpawn;
+    public float tempoEspera = 15f;
+    public bool canStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("Fase2", tempoEspera);
         tempoAtualSpawn = tempomentrespawn;
     }
 
     // Update is called once per frame
     void Update()
     {
-        tempoAtualSpawn -= Time.deltaTime;
-        if(tempoAtualSpawn <= 0)
+        if(canStart)
         {
-            SpawnarInim();
+            tempoAtualSpawn -= Time.deltaTime;
+            if(tempoAtualSpawn <= 0)
+            {
+                SpawnarInim();
+            }
         }
     }
+    private void Fase2()
+    {
+        canStart = true;
+    }
+
     private void SpawnarInim()
     {
         int objetoAleatorio = Random.Range(0,objetosSpawnados.Length);
@@ -32,4 +43,5 @@ public class SpawnInim : MonoBehaviour
         Instantiate(objetosSpawnados[objetoAleatorio], pontosDeSpawn[pontoAleatorio].position, Quaternion.Euler(0f, 0f, -90f));
         tempoAtualSpawn = tempomentrespawn;
     }
+    
 }

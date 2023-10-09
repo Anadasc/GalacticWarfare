@@ -6,6 +6,7 @@ public class Tirolazer : MonoBehaviour
 {
     public float velocidadeLazer;
     public int danodado;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,4 +32,6 @@ public class Tirolazer : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
+    
 }
